@@ -49,6 +49,7 @@ int main(int argc, char argv[])
 {
     try
     {
+        std::locale::global(std::locale("Korean"));
         utility::string_t address = U("http://127.0.0.1:9999/api");
         uri_builder uri(address);
         auto addr = uri.to_uri().to_string();
